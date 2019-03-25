@@ -18,11 +18,4 @@ const sockMerchant = (n, ar) => {
   return pairs;
 };
 
-const main = __ => {
-  const n = parseInt(9);
-  const ar = '10 20 20 10 10 30 50 10 20'.split(' ').map(arTemp => parseInt(arTemp, 10));
-  const result = sockMerchant(n, ar);
-  console.log('Result:', result);
-};
-
-main();
+export default sockMerchant;

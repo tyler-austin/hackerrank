@@ -7,8 +7,11 @@ module.exports = {
   extends: ['airbnb-base', 'plugin:prettier/recommended'],
   parser: 'babel-eslint',
   rules: {
+    "linebreak-style": 'off',
     'no-plusplus': 'off',
-    'no-unused-vars': ['error', { argsIgnorePattern: '^__' }],
+    'no-unused-vars': ['error', {
+      argsIgnorePattern: '^__'
+    }],
     'no-param-reassign': 'off',
     'no-prototype-builtins': 'off'
   }

@@ -9,4 +9,4 @@ const countingValleys = (n, s) => {
   return numValleys;
 };
 
-export { countingValleys as default };
+export default countingValleys;
