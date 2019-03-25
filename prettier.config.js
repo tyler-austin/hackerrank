@@ -5,7 +5,7 @@ module.exports = {
   singleQuote: true,
   trailingComma: 'none', // none|es5|all
   bracketSpacing: true,
-  arrowParens: 'avoid', //, avoid|always
+  arrowParens: 'avoid', // avoid|always
   parser: 'babylon', // babylon|flow,
   proseWrap: 'preserve' // always|never|preserve
 };
