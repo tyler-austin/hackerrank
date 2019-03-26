@@ -1,6 +1,6 @@
 import hourglassSum from './hourglass-sum';
 
-test('counts valleys in a string', () => {
+test('largest hourglass', () => {
   // eslint-disable-next-line prettier/prettier
   const arr = [
     [1, 1, 1, 0, 0, 0],
