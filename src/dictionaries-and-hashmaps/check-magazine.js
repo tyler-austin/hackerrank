@@ -4,7 +4,6 @@ function checkMagazine(magazine, note) {
   const m = new Set([...magazine]);
   const n = new Set([...note]);
   const difference = new Set([...n].filter(x => !m.has(x)));
-  console.log('diff', difference);
   return difference.size === 0 ? 'Yes' : 'No';
 }
 
