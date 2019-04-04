@@ -1,10 +1,11 @@
-// Complete the checkMagazine function below.
-function checkMagazine(magazine, note) {
-  // TODO: check test 2. You must check how many times something occurs. Use pop?
-  const m = new Set([...magazine]);
-  const n = new Set([...note]);
-  const difference = new Set([...n].filter(x => !m.has(x)));
-  return difference.size === 0 ? 'Yes' : 'No';
-}
+const checkMagazine = (magazine, note) => {
+  for (let i = note.length - 1; i >= 0; i--) {
+    const noteWord = note[i];
+    const magazineWordIndex = magazine.indexOf(noteWord);
+    if (magazineWordIndex !== -1) magazine.splice(magazineWordIndex, 1);
+    else return `No`;
+  }
+  return `Yes`;
+};
 
 export default checkMagazine;
