@@ -1,8 +1,9 @@
 class Player {
   constructor(name, score) {
     this.name = name;
-    this.score = score
+    this.score = score;
   }
+
   output() {
     return [this.name, this.score];
   }
@@ -14,22 +15,23 @@ const compare = (l, r) => {
   if (l.name < r.name) return false;
   if (l.name > r.name) return true;
   return false;
-}
+};
 
 const quickSort = array => {
-  if (array.length < 2) return array
-  const chosenIndex  = array.length - 1;
-  const chosen  = array[chosenIndex ];
+  if (array.length < 2) return array;
+  const chosenIndex = array.length - 1;
+  const chosen = array[chosenIndex];
   const a = [];
   const b = [];
-  for (let i = 0; i < chosenIndex ; i++) {
+  for (let i = 0; i < chosenIndex; i++) {
     const temp = array[i];
+    // eslint-disable-next-line no-unused-expressions
     compare(temp, chosen) ? a.push(temp) : b.push(temp);
   }
   // decreasing
-  const output = [...quickSort(b), chosen , ...quickSort(a)];
+  const output = [...quickSort(b), chosen, ...quickSort(a)];
   return output;
-}
+};
 
 const comparator = arr => {
   const output = [];
@@ -42,6 +44,6 @@ const comparator = arr => {
     output.push(players[i].output());
   }
   return output;
-}
+};
 
 export default comparator;
